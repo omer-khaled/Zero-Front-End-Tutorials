@@ -1,0 +1,90 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.slider-conteiner{
+    width: 800px;
+    height: 35vh;
+    position: relative;
+    margin: auto;
+    .slide-number{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: rgb(0 0 0 / 60%);
+        color: white;
+        z-index: 1;
+        font-size: 20px;
+        padding: 5px 15px;
+        border-radius: 5px;
+        z-index: 200;
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        &.active{
+            z-index: 100;
+            animation: fade-in 1s 1 forwards;
+        }
+        @keyframes fade-in {
+            to{
+                opacity: 1;
+            }
+        }
+    }
+}
+.slider-controls{
+    width: 800px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    span{
+        cursor: pointer;
+    }
+    >span{
+        &:not(:nth-child(2)){
+            width: 17%;
+            padding: 5px 0;
+            background-color: #0075FF;
+            color: white;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &:nth-child(2){
+            padding: 5px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            span{
+                display: block;
+                margin:0 10px;
+                &.active,&:hover{
+                    padding: 4px 8px;
+                    background-color: #0075FF;
+                    color: white;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 5px;
+                    box-sizing: content-box;
+                }
+                &:hover{
+                    background-color: rgba(#0075FF, 0.5);
+                }
+            }
+        }
+        &.disapled{
+            opacity: 0.5;
+            cursor: no-drop;
+        }
+    }
+}

@@ -1,0 +1,20 @@
+**** Quiz App ****
+1- create json object fo questioons
+2- start Creating html , css
+3- Add Dummy Data
+4- Create the Styling
+5- Fetch Number of questioons From Json object
+6- show question count + question categories + bulltes
+7- variable  to set the number for the right and wrong anwsers
+8- create count down timer
+9- fetch the question from the Json Object
+10- show first question
+11- check if answer is ture or false and hide question then show next one 
+12- if the countdown timer End , Mark the question as Wrong and show next question
+13- Done class on bulltes if we answring after the question
+14- if question ended we will return results
+
+ideas 
+- many Json Object and Choose Language
+- Add Many question and Choose only 10 Randomly
+- Randomize Answers (so every time dont repeted)

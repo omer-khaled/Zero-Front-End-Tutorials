@@ -1,0 +1,96 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.slider-conteiner {
+  width: 800px;
+  height: 35vh;
+  position: relative;
+  margin: auto;
+}
+.slider-conteiner .slide-number {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  z-index: 1;
+  font-size: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  z-index: 200;
+}
+.slider-conteiner img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+}
+.slider-conteiner img.active {
+  z-index: 100;
+  -webkit-animation: fade-in 1s 1 forwards;
+          animation: fade-in 1s 1 forwards;
+}
+@-webkit-keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  to {
+    opacity: 1;
+  }
+}
+
+.slider-controls {
+  width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+.slider-controls span {
+  cursor: pointer;
+}
+.slider-controls > span:not(:nth-child(2)) {
+  width: 17%;
+  padding: 5px 0;
+  background-color: #0075FF;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slider-controls > span:nth-child(2) {
+  padding: 5px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.slider-controls > span:nth-child(2) span {
+  display: block;
+  margin: 0 10px;
+}
+.slider-controls > span:nth-child(2) span.active, .slider-controls > span:nth-child(2) span:hover {
+  padding: 4px 8px;
+  background-color: #0075FF;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  box-sizing: content-box;
+}
+.slider-controls > span:nth-child(2) span:hover {
+  background-color: rgba(0, 117, 255, 0.5);
+}
+.slider-controls > span.disapled {
+  opacity: 0.5;
+  cursor: no-drop;
+}/*# sourceMappingURL=main.css.map */

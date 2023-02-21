@@ -1,0 +1,57 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 15px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+form {
+  width: 100%;
+  padding: 0 30px;
+}
+form div {
+  position: relative;
+}
+form div span {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #00bcd4;
+  transition: 0.5s;
+}
+form div input {
+  width: 100%;
+  padding: 25px 20px;
+  display: block;
+  border: none;
+  border-bottom: 3px solid #ccc;
+}
+form div input::-moz-placeholder {
+  font-size: 20px;
+  color: #999;
+}
+form div input:-ms-input-placeholder {
+  font-size: 20px;
+  color: #999;
+}
+form div input::placeholder {
+  font-size: 20px;
+  color: #999;
+}
+form div input:focus {
+  outline: none;
+}
+
+.counter {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  text-align: right;
+  padding-top: 10px;
+  padding-right: 40px;
+  color: #00bcd4;
+}/*# sourceMappingURL=main.css.map */

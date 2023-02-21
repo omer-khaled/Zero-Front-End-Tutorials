@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ec5145;
+}
+
+.continer {
+  margin: 20px auto;
+  width: 1000px;
+}
+.continer .game-info {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.continer .game-info .category span {
+  font-weight: bold;
+  color: #E91E63;
+  text-transform: capitalize;
+}
+.continer .row {
+  margin: 20px 0;
+  width: 100%;
+  height: 324px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.continer .row .Hangman-draw {
+  height: 100%;
+  width: 48%;
+  padding: 20px;
+  position: relative;
+}
+.continer .row .Hangman-draw .the-draw {
+  width: 100px;
+  height: 300px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.continer .row .Hangman-draw .the-draw .the-stand {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-hand {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  height: 100%;
+  width: 4px;
+  background-color: black;
+  transform: translateX(-50%);
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-rope {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  background-color: black;
+  width: 130%;
+  height: 4px;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man {
+  position: absolute;
+  left: 180%;
+  top: 8%;
+  width: 4px;
+  height: 12%;
+}
+.continer .row .Hangman-draw .the-draw .the-man .shat {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man .head {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px dashed black;
+  padding: 35px;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man .head::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  border: 4px solid black;
+}
+.continer .row .Hangman-draw .the-draw .the-man .body {
+  height: 140px;
+  width: 4px;
+  position: absolute;
+  top: 99px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.continer .row .Hangman-draw .the-draw .the-man .body .bod {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  z-index: 1;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man .body .hands-right, .continer .row .Hangman-draw .the-draw .the-man .body .hands-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 70px;
+  height: 4px;
+  background-color: black;
+  transform: translateY(-50%) rotate(-30deg);
+  transform-origin: left center;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man .body .hands-left {
+  transform-origin: right center;
+  transform: translateX(calc(-100% + 4px)) translateY(-50%) rotate(30deg);
+}
+.continer .row .Hangman-draw .the-draw .the-man .body .legs-right, .continer .row .Hangman-draw .the-draw .the-man .body .legs-left {
+  top: 100%;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 70px;
+  height: 4px;
+  background-color: black;
+  transform: translateY(-50%) rotate(30deg);
+  transform-origin: left center;
+  opacity: 0;
+}
+.continer .row .Hangman-draw .the-draw .the-man .body .legs-left {
+  transform-origin: right center;
+  transform: translateX(calc(-100% + 4px)) translateY(-50%) rotate(-30deg);
+}
+.continer .row .characters {
+  height: 100%;
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  padding: 15px;
+}
+.continer .row .characters span {
+  width: 55px;
+  height: 55px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #007b8c;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.continer .row .characters span.clicked {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.continer .row .characters.finish {
+  pointer-events: none;
+}
+.continer hr {
+  opacity: 0.5;
+}
+.continer .letters-guess {
+  width: 100%;
+  padding: 15px;
+  box-sizing: content-box;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.continer .letters-guess span {
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-bottom: 1px solid black;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.overlay {
+  width: 50vw;
+  height: 30vh;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background-color: #007b8c;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: none;
+}
+.overlay button {
+  font-size: 25px;
+  padding: 8px;
+  margin-top: 15px;
+  background-color: rgba(0, 117, 255, 0.8);
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.glass {
+  width: 20vw;
+  height: 20vh;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 100px auto;
+}/*# sourceMappingURL=main.css.map */

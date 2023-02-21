@@ -1,0 +1,93 @@
+@use './helpers/mixin' as *;
+@use './helpers/variables' as *;
+@use './helpers/component' as *;
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    background-color: rgba(#2196f3, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    button{
+        padding: 8px;
+        border-radius: 5px;
+        background-color: #ff6233;
+        color: white;
+        font-size: 25px;
+        border: none;
+        cursor: pointer;
+    }
+}
+.game{
+    width: 1100px;
+    height: 100vh;
+    margin:20px auto;
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:15px;
+        border: 2px solid #000;
+    }
+    .images{
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: row wrap;
+        .box{
+            width: calc((100% - 40px) / 5);
+            height: 170px;
+            border: 3px solid #2196f3; 
+            position: relative; 
+            transform-style: preserve-3d;
+            perspective: 600px;
+            cursor: pointer;
+            transition: 0.6s transform;
+            margin-bottom: 10px;
+            padding: 5px;
+            // pointer-events: none;
+            &.no-clicking{
+                pointer-events: none !important;
+            }
+            &.no-clickingfoeve{
+                pointer-events: none !important;
+            }
+            .face,.back{
+                font: {
+                    size:100px;
+                };
+                position: absolute;
+                background-color: #333333;
+                color: white;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                backface-visibility: hidden;
+            }
+            .back{
+                transform: rotateY(180deg);
+                background-color: #ffffff;
+            }
+            &.show{
+                transform: rotateY(180deg);
+            }
+        }
+    }
+}

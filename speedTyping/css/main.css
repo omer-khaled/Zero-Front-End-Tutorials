@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #eee;
+}
+
+.container {
+  margin: auto;
+  width: 100%;
+}
+@media (min-width: 767px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 950px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+::-moz-selection {
+  background-color: white;
+  color: #0075FF;
+}
+
+::selection {
+  background-color: white;
+  color: #0075FF;
+}
+
+header .container .finish-massage, header .container .footer {
+  width: 80%;
+  background-color: white;
+  padding: 10px;
+}
+
+header h4 {
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0075FF;
+  color: white;
+}
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+header .container > p {
+  padding: 15px;
+  margin: 20px auto 0 auto;
+  background-color: white;
+  width: 70%;
+  text-align: center;
+}
+header .container > p span {
+  color: #0075FF;
+  padding: 0 3px;
+}
+header .container .selecion {
+  padding: 0;
+  margin-top: 20px;
+  position: relative;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+header .container .selecion select {
+  cursor: pointer;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: #0075FF;
+  color: white;
+  font-size: 20px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 0;
+}
+header .container .selecion i {
+  content: "#f107";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+header .container button {
+  width: 80%;
+  background-color: #009688;
+  padding: 15px;
+  margin-top: 20px;
+  border: none;
+  outline: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+header .container .current-word {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: #0075FF;
+  font-size: 50px;
+  font-weight: bold;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+header .container input[type=text] {
+  display: block;
+  width: 80%;
+  margin: auto;
+  border: 2px solid #0075FF;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 18px;
+  text-align: center;
+  text-transform: capitalize;
+}
+header .container input[type=text]:focus {
+  outline: none;
+}
+header .container input[type=text]::-moz-placeholder {
+  color: #0075FF;
+  font-size: 18px;
+}
+header .container input[type=text]:-ms-input-placeholder {
+  color: #0075FF;
+  font-size: 18px;
+}
+header .container input[type=text]::placeholder {
+  color: #0075FF;
+  font-size: 18px;
+}
+header .container .words {
+  width: 80%;
+  margin: 20px;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  background-color: white;
+}
+header .container .words span {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 3px;
+  color: white;
+  background-color: #0075FF;
+  border-radius: 5px;
+  margin: 10px 0 0 5px;
+}
+header .container .footer {
+  display: flex;
+  justify-content: space-between;
+}
+header .container .finish-massage {
+  margin-top: 20px;
+  font-size: 20px;
+  text-align: center;
+  color: #0075FF;
+}
+header .container .finish-massage.bad {
+  color: red;
+}
+header .container .finish-massage.good {
+  color: green;
+}
+
+.d-none {
+  display: none !important;
+}/*# sourceMappingURL=main.css.map */

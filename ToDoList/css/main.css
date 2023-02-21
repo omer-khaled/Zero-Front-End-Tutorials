@@ -1,0 +1,133 @@
+:root {
+  --main-color: #f44336;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  width: 60%;
+  background-color: #ffffff;
+  padding: 10px 30px;
+  margin: auto;
+}
+.container h1 {
+  font-size: 40px;
+  text-align: center;
+  margin: 20px auto;
+  color: transparent;
+  -webkit-text-stroke: 1px var(--main-color);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+}
+.container h1::before {
+  content: "To Do List";
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  -webkit-animation: anim 1.5s infinite alternate ease-in-out;
+          animation: anim 1.5s infinite alternate ease-in-out;
+  -webkit-text-fill-color: var(--main-color);
+  overflow: hidden;
+}
+@media (max-width: 992px) {
+  .container {
+    width: 80%;
+  }
+}
+.container form {
+  padding: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container form input[type=text] {
+  width: 80%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  border: none;
+}
+.container form input[type=text]:focus {
+  outline: none;
+}
+.container form input[type=submit] {
+  cursor: pointer;
+  width: 15%;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-color: #f44336;
+  color: white;
+  font-size: 18px;
+}
+.container .tasks {
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #ddd;
+  border-radius: 10px;
+}
+.container .tasks div {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: context-menu;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container .tasks div:not(:last-child) {
+  margin-bottom: 15px;
+}
+.container .tasks div.done {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+.container .tasks div:not(.done):hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.container .tasks div i {
+  color: red;
+  cursor: pointer;
+}
+.container .tasks div i:not(:last-child) {
+  margin-right: 15px;
+  color: #00bcd4;
+}
+.container .tasks div i:nth-child(1) {
+  color: green;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes anim {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}/*# sourceMappingURL=main.css.map */

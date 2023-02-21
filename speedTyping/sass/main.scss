@@ -1,0 +1,150 @@
+@use  './healper/grid' as * ;
+@use  './healper/mixin' as * ;
+@use  './healper/vriables' as * ;
+
+%share-componet{
+    width: 80%;
+    background-color: white;
+    padding: 10px;
+}
+header{
+    h4{
+        width: 100%;
+        padding: 10px;
+        font: {
+            size:25px;
+            weight : bold;
+        };
+        text-align: center;
+        background-color: $mainColor;
+        color: white;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-flow: column nowrap;
+        >p{
+            padding: 15px;
+            margin: 20px auto 0 auto;
+            background-color: white;
+            width: 70%;
+            text-align: center;
+            span{
+                color: $mainColor;
+                padding: 0 3px;
+            }
+        }
+        .selecion{
+            padding: 0;
+            margin-top: 20px;
+            position: relative;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            select{
+                cursor: pointer;
+                width: 100%;
+                margin: auto;
+                padding: 10px;
+                border: none;
+                outline: none;
+                background-color: $mainColor;
+                color: white;
+                font-size: 20px;
+                appearance: none;
+                border-radius: 0;
+            }
+            i{
+                content: "#f107";
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: white;
+            }
+        }
+        button{
+            width: 80%;
+            background-color: #009688;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            outline: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        .current-word{
+            width: 100%;
+            text-align: center;
+            padding: 20px 0;
+            color: $mainColor;
+            font: {
+                size: 50px;
+                weight: bold;
+            };
+            user-select: none;
+        }
+        input[type="text"]{
+            display: block;
+            width: 80%;
+            margin: auto;
+            border: 2px solid $mainColor;
+            border-radius: 5px;
+            padding: 15px;
+            font-size: 18px;
+            text-align: center;
+            text-transform: capitalize;
+            &:focus{
+                outline: none;
+            }
+            &::placeholder{
+                color: $mainColor;
+                font-size: 18px;
+            }
+        }
+        .words{
+            width: 80%;
+            margin: 20px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: row wrap;
+            background-color: white;
+            span{
+                display: inline-block;
+                width: fit-content;
+                padding: 3px;
+                color: white;
+                background-color: $mainColor;
+                border-radius: 5px;
+                margin: 10px 0  0 5px;
+            }
+        }
+        .footer{
+            @extend %share-componet;
+            display: flex;
+            justify-content: space-between;
+        }
+        .finish-massage{
+            @extend %share-componet;
+            margin-top: 20px;
+            font-size: 20px;
+            text-align: center;
+            color: $mainColor;
+            &.bad{
+                color: red;
+            }
+            &.good{
+                color: green;
+            }
+        }
+    }
+}
+.d-none{
+    display: none !important;
+}

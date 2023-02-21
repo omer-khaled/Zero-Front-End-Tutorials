@@ -1,0 +1,21 @@
+html{
+    transition: 0.6s all;
+}
+body{
+    height: 5000px;
+    transition: 0.6s all;
+}
+span{
+    background-color: aqua;
+    padding: 10px;
+    font-size: 18px;
+    color: white;
+    border-radius: 4px;
+    position: fixed;
+    bottom: -20%;
+    right: 10px;
+    cursor: pointer;
+    transition: 0.6s all;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}

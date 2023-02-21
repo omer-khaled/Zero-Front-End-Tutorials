@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/external/all.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h4>Typing Speed Test Game</h4>
+        <div class="container">
+            <p>You Are Plaing on [<span class="level"></span>] Level & You Have [<span class="seconds"></span>] Seconds to Type The Word</p>
+            <div class="selecion">
+                <i class="fa-solid fa-angle-down"></i>
+                <select name=""   id="selector">
+                    <option value="Easy">Easy</option>
+                    <option value="Normal">Normal</option>
+                    <option value="Hard">Hard</option>
+                </select>
+            </div>
+            <button>Starting Play</button>
+            <h2 class="current-word d-none">Word</h2>
+            <input class="d-none" type="text" placeholder="Enter Current Word" name="" id="">
+            <div class="words d-none"></div>
+            <div class="footer d-none">
+                <p class="Timer">Time Left: <span class="conter"></span> Seconds</p>
+                <p class="score">Score: <span class="start"></span> From <span class="end"></span></p>
+            </div>
+            <div class="finish-massage d-none">
+            </div>
+        </div>
+    </header>
+    <script src="./js/script.js" type="module"></script>
+</body>
+</html>

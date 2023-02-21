@@ -1,0 +1,22 @@
+body{
+    overflow-x: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    transition: 1s all;
+    &:nth-child(odd){
+        background-color: #ccc;
+    }
+    &:nth-child(even){
+        color: white;
+        background-color: #000;
+    }
+}

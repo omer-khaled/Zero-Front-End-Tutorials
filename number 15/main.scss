@@ -1,0 +1,53 @@
+/*
+clip-path: circle(); generate circle on my size (width and height)
+value 1 => for width and height
+at 
+left  > x-axis 
+top   > y-axis
+بيشتغل على عدد الرؤؤس
+clip-path: polygon( ras 1, ras 2 , ras 3);
+*/
+div{
+    width: 250px;
+    height: 250px;
+    background-color: #ccc;
+    margin: 150px auto;
+    position: relative;
+    span{
+        position: absolute;
+        font: {
+            size: 1rem;
+            weight: bold;
+            family: arial;
+        }
+        &:first-child{
+            left: 5px;
+            top: -30px;
+        }
+        &:last-child{
+            left: -40px;
+            top: 25px;
+            transform: rotate(90deg);
+        }
+    }
+    &::before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        // clip-path: circle(50% at -88px -88px); circle
+        // clip-path: polygon(50% 0 , 100% 100% , 0% 100%);
+        // clip-path: polygon(100% 0 , 0 100% , 100% 100%);
+        // clip-path: polygon( 0 0 , 0 100% , 100% 50%);
+        clip-path: polygon(0% 50%, 60% 50%, 60% 40%, 70% 50%, 60% 60%, 60% 50%, 0% 50%);
+        transition: 1s;
+    }
+    &:hover::before{
+        // clip-path: circle(250px at 50% 50%); circle
+        clip-path: polygon(0 0 , 0 100% , 100% 100%);
+    }
+}

@@ -1,0 +1,51 @@
+/*How castmize radio input*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+form{
+    width: 400px;
+    margin: 20px auto;
+    background-color: #f9f9f9;
+    padding: 15px;
+}
+form>div{
+    padding: 5px 0;
+}
+form input[type="radio"]{
+    /*to hide checkbox*/
+    appearance: none; 
+}
+form label {
+    position: relative;
+    margin-left: 32px;
+}
+form label::before{
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #0075ff;
+    outline: none;
+    left: -32px;
+}
+form input[type="radio"]:checked + label::after,
+form input[type="radio"]:not(:checked):hover + label::after{
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #0075ff;
+    left: -28px;
+    top:50%;
+    transform: translateY(-50%);
+}
+form input[type="radio"]:not(:checked):hover + label::after{
+    background-color: rgb(0 117 255 / 20%);
+}
+form input[type="radio"]:checked + label{
+    color: #0075ff;
+}
+form input[type="radio"]:not(:checked):hover + label{
+    color: #0075ff;
+    opacity: 0.5;
+}

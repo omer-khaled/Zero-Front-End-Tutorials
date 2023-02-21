@@ -1,0 +1,42 @@
+.conteiner{
+    width: 600px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: #ccc;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: column wrap;
+    font-size: 20px;
+    .serial{
+        width: 70%;
+        background-color: black;
+        margin: auto;
+        color: white;
+        padding: 15px;
+        text-align: center;
+    }
+    div:not(:first-child){
+        width:100px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    .generate{
+        width: fit-content;
+        margin: auto;
+        color: white;
+        padding:10px 20px;
+        border-radius: 4px;
+        cursor: pointer;
+        background-color: #f44336;
+        //make user cant select text in button 
+        user-select: none;
+        &:hover{
+            background-color: #e83123;
+        }
+    }
+}

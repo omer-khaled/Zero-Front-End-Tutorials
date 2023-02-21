@@ -1,0 +1,62 @@
+/*
+this will start animation with 0% ,  and will end animation with 100%
+*/
+:root {
+  --main-color: rgb(255 255 255 / 80%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #333;
+}
+
+p {
+  font-size: 2rem;
+  color: rgba(255, 255, 255, 0.8);
+  width: 0;
+  margin: auto;
+  padding-right: 1px;
+  border-right: 1px solid rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-animation: anim 3s 2s steps(23) infinite alternate, animop 0.5s infinite;
+          animation: anim 3s 2s steps(23) infinite alternate, animop 0.5s infinite;
+}
+
+@-webkit-keyframes anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 460px;
+  }
+}
+
+@keyframes anim {
+  from {
+    width: 0;
+  }
+  to {
+    width: 460px;
+  }
+}
+@-webkit-keyframes animop {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}
+@keyframes animop {
+  from {
+    border-right-color: rgba(255, 255, 255, 0.8);
+  }
+  to {
+    border-right-color: transparent;
+  }
+}/*# sourceMappingURL=main.css.map */
